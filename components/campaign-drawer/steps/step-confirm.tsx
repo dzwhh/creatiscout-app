@@ -7,7 +7,7 @@ import { formatCurrency } from "@/lib/utils";
 import { StepShell } from "./step-shell";
 
 export function StepConfirm({ campaign }: { campaign: Campaign }) {
-  const wonDeals = deals.filter((d) => d.stage === "final" || d.stage === "won");
+  const wonDeals = deals.filter((d) => d.stage === "won");
   const [confirmed, setConfirmed] = useState<Set<string>>(new Set());
 
   function toggle(id: string) {
